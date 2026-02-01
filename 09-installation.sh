@@ -33,5 +33,3 @@ if [ $? -ne 0 ];then
 else
     echo "nginx already exists.....skipping"
 fi
-
-
