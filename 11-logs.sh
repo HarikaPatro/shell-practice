@@ -21,10 +21,10 @@ echo "script started execution at: $(date)" | tee -a $LOG_FILE
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "error:: installing $2 is $R failed $N" | tee -a $LOG_FILE
+        echo -e "error:: installing $2 is $R failed $N" | tee -a $LOG_FILE
         exit 1
     else
-        echo "installing $2 is $G success $N" | tee -a $LOG_FILE
+        echo -e "installing $2 is $G success $N" | tee -a $LOG_FILE
     fi
 }
 
