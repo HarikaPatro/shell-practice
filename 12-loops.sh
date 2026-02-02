@@ -14,13 +14,13 @@ echo "script started execution at: $(date)" | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ]; then
     echo "error::please run with root access"
-    exit1
+    exit 1
 fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
         echo -e "error::installing $2 is $R failed $N" | tee -a $LOG_FILE
-        exit1
+        exit 1
     else
         echo -e "installing $2 is $G success $N" |tee -a $LOG_FILE
     fi
